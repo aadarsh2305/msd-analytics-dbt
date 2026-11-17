@@ -1,0 +1,6 @@
+inventory_id,product_id,warehouse_id,quantity_available
+I001,P001,W001,500
+I002,P002,W001,200
+I003,P003,W002,350
+I004,P004,W002,150
+I005,P005,W001,600

@@ -1,0 +1,18 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# dbt generated artifacts
+**/target/
+**/dbt_packages/
+**/logs/
+
+# Credentials and environment variables
+.env
+.env.*
+!.env.example
+**/profiles.yml
+
+# IDE
+.vscode/

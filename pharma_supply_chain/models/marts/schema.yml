@@ -1,0 +1,42 @@
+
+version: 2
+
+models:
+  - name: fct_sales
+    description: "Sales transactions with calculated revenue"
+    columns:
+      - name: sale_id
+        data_tests:
+          - unique
+          - not_null
+      - name: total_revenue
+        data_tests:
+          - not_null
+
+  - name: fct_inventory
+    columns:
+      - name: inventory_id
+        data_tests:
+          - unique
+          - not_null
+
+  - name: dim_product
+    columns:
+      - name: product_id
+        data_tests:
+          - unique
+          - not_null
+
+  - name: dim_supplier
+    columns:
+      - name: supplier_id
+        data_tests:
+          - unique
+          - not_null
+
+  - name: mart_supply_chain_performance
+    columns:
+      - name: product_id
+        data_tests:
+          - unique
+          - not_null

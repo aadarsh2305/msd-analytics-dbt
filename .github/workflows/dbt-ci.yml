@@ -1,0 +1,15 @@
+
+name: dbt Pull Request CI
+
+on:
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  dbt-ci:
+    uses: aadarsh2305/msd-dbt-golden-workflows/.github/workflows/reusable-dbt-ci.yml@main

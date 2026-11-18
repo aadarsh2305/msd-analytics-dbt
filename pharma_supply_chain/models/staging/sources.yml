@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+  - name: pharma_raw
+    description: "Synthetic pharmaceutical supply chain data"
+    database: PHARMA_SUPPLY_CHAIN
+    schema: DBT_DEV
+
+    tables:
+      - name: products
+      - name: suppliers
+      - name: inventory
+      - name: shipments
+      - name: sales

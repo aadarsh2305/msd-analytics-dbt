@@ -13,3 +13,7 @@ permissions:
 jobs:
   dbt-ci:
     uses: aadarsh2305/msd-dbt-golden-workflows/.github/workflows/reusable-dbt-ci.yml@main
+    secrets:
+      SNOWFLAKE_ACCOUNT: ${{ secrets.SNOWFLAKE_ACCOUNT }}
+      SNOWFLAKE_USER: ${{ secrets.SNOWFLAKE_USER }}
+      SNOWFLAKE_PRIVATE_KEY: ${{ secrets.SNOWFLAKE_PRIVATE_KEY }}

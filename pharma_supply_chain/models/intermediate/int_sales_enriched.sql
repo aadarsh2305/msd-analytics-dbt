@@ -1,4 +1,3 @@
-
 {{ config(materialized='view') }}
 
 select
@@ -10,6 +9,6 @@ select
     s.quantity_sold,
     p.unit_price,
     s.quantity_sold * p.unit_price as total_revenue
-from {{ ref('stg_sales') }} s
-inner join {{ ref('stg_products') }} p
+from {{ ref('stg_sales') }} as s
+inner join {{ ref('stg_products') }} as p
     on s.product_id = p.product_id

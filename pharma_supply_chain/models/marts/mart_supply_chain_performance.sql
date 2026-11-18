@@ -1,4 +1,3 @@
-
 {{ config(materialized='table') }}
 
 with inventory as (
@@ -37,7 +36,7 @@ select
     coalesce(sh.total_shipments, 0) as total_shipments,
     coalesce(sh.delivered_shipments, 0)
         as delivered_shipments
-from {{ ref('stg_products') }} p
-left join inventory i on p.product_id = i.product_id
-left join sales s on p.product_id = s.product_id
-left join shipments sh on p.product_id = sh.product_id
+from {{ ref('stg_products') }} as p
+left join inventory as i on p.product_id = i.product_id
+left join sales as s on p.product_id = s.product_id
+left join shipments as sh on p.product_id = sh.product_id
